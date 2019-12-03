@@ -12,7 +12,7 @@ void show(){
 fill(255);
 move();
 ellipse(x,y,10,10);
-rect(0,350,600,400);
+rect(-1,349,600,400);
 }
 void move(){
 y+=speed;
