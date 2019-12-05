@@ -27,5 +27,6 @@ void draw(){
    santa.show();
      house.show();
      sman.show();
+     fill(0,255,0);
      text("x: "+mouseX+" y: "+mouseY,mouseX,mouseY);
 }
