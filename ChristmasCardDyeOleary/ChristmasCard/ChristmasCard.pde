@@ -2,6 +2,8 @@ Snow snowball;
 Santa santa;
 House house;
 Snowman sman;
+PFont font;
+PFont normal;
 ArrayList<Snow>snowList;
 void setup(){
 size(600,400);
@@ -15,9 +17,19 @@ while(m<101){
 snowList.add(new Snow());
 m++;
 }
+font =createFont("Precious.ttf",50);
+normal=createFont("Times New Roman",12);
 }
 void draw(){
   background(0);
+  textSize(50);
+  if(second()>=30){
+    fill(255,0,0);
+  }else{
+    fill(0,255,0);
+  }
+  textFont(font);
+  text("Merry Christmas!",23,80);
   house.show();
   snowball.show();
   for(Snow x: snowList){
@@ -28,5 +40,7 @@ void draw(){
      house.show();
      sman.show();
      fill(0,255,0);
-     text("x: "+mouseX+" y: "+mouseY,mouseX,mouseY);
+     //textSize(12);
+     //textFont(normal);
+     //text("x: "+mouseX+" y: "+mouseY,mouseX,mouseY);
 }

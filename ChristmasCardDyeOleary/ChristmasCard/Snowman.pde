@@ -43,7 +43,8 @@ shape(hat,329,207);
 }
 void spinDance(){
   if(timec==false){
-    time=millis()+8000;
+    time=millis()+((int)(Math.random()*6000))+8000;
+     System.out.println(time);
     timec=true;
   }
   if(spn!=4){
@@ -82,7 +83,8 @@ fill(112,241,152);
   spn=0;
   y=235;
   hy=207;
-  time=millis()+8000;
+  time=millis()+((int)(Math.random()*6000))+8000;
+  System.out.println(time);
   timec=false;
   spin=false;
   }

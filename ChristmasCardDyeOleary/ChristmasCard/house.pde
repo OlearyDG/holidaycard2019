@@ -1,8 +1,17 @@
 public class House{
-
-  public House(){
-
+ArrayList<Light> lights=new ArrayList<Light>();
+  public House(){    
+    int c=0;
+for(int i=18;i<=190;i+=6){
+lights.add(new Light(i,200,c%2==0));
+c++;
 }
+c=0;
+for(int i=193;i<=288;i+=6){
+lights.add(new Light(i,260,c%2==0));
+c++;
+}
+  }
 
 void show(){
 //house box
@@ -37,6 +46,10 @@ triangle(10,200,105,150,200,200);
 //garage roof
 fill(135,90,85);
 triangle(190,260, 190,220,295,260);
+//lights
+for(Light x:lights){
+x.show();
+}
 }
 
 }
